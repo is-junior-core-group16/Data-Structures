@@ -45,6 +45,7 @@ namespace DataStructures.Controllers
             {
                 myStack.Push("New Entry " + (myStack.Count + 1));
             }
+
             ViewBag.MyStack = myStack;
             return View("Index");
         }
