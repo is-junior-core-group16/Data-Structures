@@ -170,6 +170,10 @@
     <Content Include="Views\Stack\Index.cshtml" />
     <Content Include="Views\Stack\DisplayStack.cshtml" />
     <Content Include="Views\Stack\SearchStack.cshtml" />
+    <Content Include="Views\Queue\Index.cshtml" />
+    <Content Include="Views\Queue\DisplayQueue.cshtml" />
+    <Content Include="Views\Queue\SearchQueue.cshtml" />
+    <Content Include="Views\Queue\NO.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -182,7 +186,6 @@
     <Folder Include="Graphics\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Dictionary\" />
-    <Folder Include="Views\Queue\" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
