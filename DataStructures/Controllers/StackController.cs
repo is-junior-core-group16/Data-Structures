@@ -61,9 +61,20 @@ namespace DataStructures.Controllers
         //action result that will delete items from the stack
         public ActionResult DeleteStack()
         {
-            //use pop because it deletes most recent
-            myStack.Pop();
-            ViewBag.MyStack = myStack;
+            //check if stack is empty so it doesn't crash...if empty display an error message
+            if (myStack.Count == 0)
+            {
+                ViewBag.Output = "There is nothing in the stack. Please add something to the stack!";
+                return View("EmptyStack");
+            }
+            else
+            {
+                //use pop because it deletes most recent
+                myStack.Pop();
+                ViewBag.MyStack = myStack;
+                
+            }
+
             return View("Index");
 
         }

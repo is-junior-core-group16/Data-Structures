@@ -170,10 +170,14 @@
     <Content Include="Views\Stack\Index.cshtml" />
     <Content Include="Views\Stack\DisplayStack.cshtml" />
     <Content Include="Views\Stack\SearchStack.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\Queue\Index.cshtml" />
     <Content Include="Views\Queue\DisplayQueue.cshtml" />
     <Content Include="Views\Queue\SearchQueue.cshtml" />
     <Content Include="Views\Queue\NO.cshtml" />
+=======
+    <Content Include="Views\Stack\EmptyStack.cshtml" />
+>>>>>>> 92eb6131c4cfccb7ca4160100e51655ac4e5bf0e
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
