@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,6 +12,10 @@ namespace DataStructures.Controllers
         //declare variable
         //creat new stack variable of type= string
         static Stack<string> myStack = new Stack<string>();
+        bool checkSearch = true;
+        private bool checkStack;
+        System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+
         
 
         // GET: Stack
@@ -36,7 +41,7 @@ namespace DataStructures.Controllers
             myStack.Clear();
 
             //loop to add 2000 new items to the stack
-            for(int i =0; i <= 2000; i++)
+            for (int i = 0; i < 2000; i++)
             {
                 myStack.Push("New Entry " + (myStack.Count + 1));
             }
@@ -50,14 +55,18 @@ namespace DataStructures.Controllers
             ViewBag.MyStack = myStack;
             return View("DisplayStack");
         }
+
         
-        /*
         //action result that will delete items from the stack
         public ActionResult DeleteStack()
         {
+            //use pop because it deletes most recent
+            myStack.Pop();
+            ViewBag.MyStack = myStack;
+            return View("Index");
 
         }
-        */
+        
 
         //action result that will clear the stack
         public ActionResult ClearStack()
@@ -67,22 +76,51 @@ namespace DataStructures.Controllers
             return View("Index");
         }
 
-        /*
+
         //action result that will search the stack
         public ActionResult SearchStack()
         {
 
-        }
-        */
+            //for each loop that will search the stack for New Entry 5
+            foreach (string sData in myStack)
+            {
+                //starts the stopwatch either way, only will if it is true
+                //starts the stopwatch
+                sw.Start();
 
-        /*action result to return to the main menu
-        public ActionResult Return()
-        {
-            return View()
-        }
-        */
-        
-        
+                checkStack = myStack.Contains("New Entry 5");
+                if (checkStack == true)
+                {
+                    ViewBag.Output = "Found entry!";
 
+                    //stops the stopwatch
+                    sw.Stop();
+
+                    TimeSpan ts = sw.Elapsed;
+
+                    ViewBag.StopWatch = ts;
+                }
+
+                else
+                {
+                    ViewBag.Output = "Not Found";
+                }
+
+            }
+
+
+            return View("SearchStack");
+
+
+            /*action result to return to the main menu
+            public ActionResult Return()
+            {
+                return View()
+            }
+            */
+
+
+
+        }
     }
 }

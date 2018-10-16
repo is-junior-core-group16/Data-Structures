@@ -26,11 +26,9 @@
 </body>
 
 <!--displays the output in relation to the controller-->
-<h2><font color="red">This is your stack data:</font></h2>
-@foreach (var sData in ViewBag.MyStack)
-{
-    <p>@sData</p>
-}
+@ViewBag.Output
+@ViewBag.Stopwatch 
+
 
 
 </html>

@@ -166,6 +166,7 @@
     <Content Include="Views\Index\Index.cshtml" />
     <Content Include="Views\Stack\Index.cshtml" />
     <Content Include="Views\Stack\DisplayStack.cshtml" />
+    <Content Include="Views\Stack\SearchStack.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
