@@ -1,4 +1,4 @@
-﻿
+﻿<!--This is the index.cshtml for the stack page, you get here from the main index page when you click it at the top-->
 @{
     Layout = null;
 }
@@ -6,6 +6,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!--Link to css-->
+    <link href="@Url.Content("~/Content/StackDesign.css")" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width-device-width" />
     <title>Stack Index</title>
 </head>
@@ -19,7 +21,7 @@
         <li><a href="@Url.Action("DeleteStack", "Stack")">Delete From Stack</a></li>
         <li><a href="@Url.Action("ClearStack", "Stack")">Clear Stack</a></li>
         <li><a href="@Url.Action("SearchStack", "Stack")">Search Stack</a></li>
-        <li><a href="@Url.Action("Return", "Stack")">Return to Main Menu</a></li>
+        <li><a href="@Url.Action("Index", "Index")">Return to Main Menu</a></li>
     </ul>
 
 </body>
